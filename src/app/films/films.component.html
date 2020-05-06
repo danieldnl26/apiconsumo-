@@ -1,7 +1,24 @@
 <h2>Peliculas</h2>
 
-<div *ngFor="let film of films">
-  <h3>{{film.title}}</h3>
-  <h2>{{film.episode_id}}</h2>
-  <p>{{film.director}}</p>
+<div>
+  <table border="1" style="width: 100%;">
+    <thead>
+      <tr>
+        <th>Titulo</th>
+        <th>episode id</th>
+        <th>director</th>
+        <th>producer</th>
+        <th>release date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let film of films">
+        <td>{{ film.title }}</td>
+        <td>{{ film.episode_id }}</td>
+        <td>{{ film.director }}</td>
+        <td>{{ film.producer }}</td>
+        <td>{{ film.release_date }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
